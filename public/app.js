@@ -1,6 +1,5 @@
 // get user's data
 
-const { get } = require("express/lib/response");
 
 // get user's coordinates
 async function getCoords () {
@@ -53,6 +52,7 @@ console.log(buildAd2(getCoords()))
 // event listeners
 // on load, build ads
 window.onload = async () => {
+    buildAd1 ()
     const coords = await getCoords ()
     buildAd2(coords)
 }
