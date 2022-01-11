@@ -8,19 +8,19 @@ async function getCoords () {
     })
     return [pos.coords.latitude, pos.coords.longitude]
 }
-console.log(getCoords());
+// console.log(getCoords());
 // get user's time
 function userTime () {
     const now = new Date()
     return now.getHours()
 }
-console.log(userTime())
+// console.log(userTime())
 
 function getMealTime () {
     const tod = userTime ()
     return tod > 20 ? 'latenight snack' : tod > 16 ? 'dinner' : tod > 11 ? 'lunch' : 'breakfast' 
 }
-console.log(getMealTime())
+// console.log(getMealTime())
 // helper functions
 // check time of day
 
@@ -34,7 +34,7 @@ function buildAd1 () {
     inner.innerHTML = `We've got the best <span>${mealTime}</span> in town`
     content.append(inner)
 }
-buildAd1()
+// buildAd1()
 // build ad 2
 // Build Ad 2                                                             
 function buildAd2(coordinates){
@@ -46,7 +46,7 @@ function buildAd2(coordinates){
     content.append(inner)
 }
 
-console.log(buildAd2(getCoords()))
+// console.log(buildAd2(getCoords()))
 
 
 // event listeners
